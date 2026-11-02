@@ -1,0 +1,131 @@
+.agents/skills/building-emdash-site/SKILL.md
+  s_fc2d601dcd8e63::t_8ffdc8f8737e5b 1-151
+.agents/skills/building-emdash-site/references/configuration.md
+  s_fc2d601dcd8e63::t_6904ca198d54ba 1-234
+.agents/skills/building-emdash-site/references/querying-and-rendering.md
+  s_fc2d601dcd8e63::t_70b4b91132c3de 1-424
+.agents/skills/building-emdash-site/references/schema-and-seed.md
+  s_fc2d601dcd8e63::t_c9f633ca420fa9 1-529
+.agents/skills/building-emdash-site/references/site-features.md
+  s_fc2d601dcd8e63::t_38896418592314 1-540
+.agents/skills/creating-plugins/SKILL.md
+  s_fc2d601dcd8e63::t_8ed6939d8efcdf 1-134
+.agents/skills/creating-plugins/references/admin-ui.md
+  s_fc2d601dcd8e63::t_05f9ada48f7778 1-211
+.agents/skills/creating-plugins/references/api-routes.md
+  s_fc2d601dcd8e63::t_b42cd3eb0ff04e 1-245
+.agents/skills/creating-plugins/references/block-kit.md
+  s_fc2d601dcd8e63::t_5ef1357410e194 1-584
+.agents/skills/creating-plugins/references/comments.md
+  s_fc2d601dcd8e63::t_7a2b2c40004796 1-13
+.agents/skills/creating-plugins/references/content.md
+  s_fc2d601dcd8e63::t_87043162325d0e 1-41
+.agents/skills/creating-plugins/references/hooks.md
+  s_fc2d601dcd8e63::t_98ee191decfd93 1-585
+.agents/skills/creating-plugins/references/media.md
+  s_fc2d601dcd8e63::t_7ad676dfe7b523 1-25
+.agents/skills/creating-plugins/references/portable-text-blocks.md
+  s_fc2d601dcd8e63::t_4c4408339f75bd 1-253
+.agents/skills/creating-plugins/references/publishing.md
+  s_fc2d601dcd8e63::t_b4ec6b0dcd380b 1-101
+.agents/skills/creating-plugins/references/sandbox-boundaries.md
+  s_fc2d601dcd8e63::t_66cd3d0ce7be62 1-43
+.agents/skills/creating-plugins/references/storage.md
+  s_fc2d601dcd8e63::t_bd16a9ef59ea58 1-213
+.agents/skills/creating-plugins/references/taxonomies-and-redirects.md
+  s_fc2d601dcd8e63::t_bf7ce0b4c29518 1-19
+.agents/skills/emdash-cli/EDITING-FLOW.md
+  s_fc2d601dcd8e63::t_f9267eb01e9f43 1-180
+.agents/skills/emdash-cli/SKILL.md
+  s_fc2d601dcd8e63::t_f4bf39ec6d4bda 1-267
+.claude/skills
+  s_fc2d601dcd8e63::t_f182d9967981dc 1
+.cursor/mcp.json
+  s_fc2d601dcd8e63::t_2ea2ecd04b01f9 1-8
+.gitignore
+  s_fc2d601dcd8e63::t_dea66c1f26a8cf 1-15
+.mcp.json
+  s_fc2d601dcd8e63::t_cbf655b7fdf326 1-8
+.vscode/mcp.json
+  s_fc2d601dcd8e63::t_e0ca08251e823d 1-8
+AGENTS.md
+  s_fc2d601dcd8e63::t_62abaa2825986b 1-114
+README.md
+  s_fc2d601dcd8e63::t_e22d5f57a01b61 1,5-18,22-23,26,30
+astro.config.mjs
+  s_fc2d601dcd8e63::t_46b2c959c58816 1-38
+emdash-env.d.ts
+  s_fc2d601dcd8e63::t_8070f0c67ce839 1-45
+package.json
+  s_fc2d601dcd8e63::t_c167f6c279f981 1-32
+pnpm-lock.yaml
+  s_fc2d601dcd8e63::t_10d7cc765c64be 1-7244
+pnpm-workspace.yaml
+  s_fc2d601dcd8e63::t_a0c3f7ce28a522 1-15
+seed/seed.json
+  s_fc2d601dcd8e63::t_9ebdc40ed7015c 1-940
+src/components/Byline.astro
+  s_fc2d601dcd8e63::t_a1947ce4440085 1-230
+src/components/Pagination.astro
+  s_fc2d601dcd8e63::t_1e2f57a82cff64 1-71
+src/components/PostCard.astro
+  s_fc2d601dcd8e63::t_b57de32be9dee6 1-462
+src/layouts/Base.astro
+  s_fc2d601dcd8e63::t_6c5ac6603dc137 1-1498
+src/live.config.ts
+  s_fc2d601dcd8e63::t_476a5b1f5bc23c 1-13
+src/pages/404.astro
+  s_fc2d601dcd8e63::t_d6324bdccaa270 1-203
+src/pages/category/[slug].astro
+  s_fc2d601dcd8e63::t_6f735c594254eb 1-138
+src/pages/index.astro
+  s_fc2d601dcd8e63::t_e4bb5990c22c23 1-204
+src/pages/pages/[slug].astro
+  s_fc2d601dcd8e63::t_2f479f6147bc3f 1-84
+src/pages/posts/[slug].astro
+  s_fc2d601dcd8e63::t_cd94ce7d128d27 1-1026
+src/pages/posts/index.astro
+  s_fc2d601dcd8e63::t_dff33dcb2c97fc 1-101
+src/pages/rss.xml.ts
+  s_fc2d601dcd8e63::t_7ca29d6305f1fa 1-71
+src/pages/search.astro
+  s_fc2d601dcd8e63::t_8c3384a9126777 1-433
+src/pages/tag/[slug].astro
+  s_fc2d601dcd8e63::t_6ed4c77854b3a9 1-142
+src/styles/prose.css
+  s_fc2d601dcd8e63::t_a671d0165963da 1-240
+src/styles/theme.css
+  s_fc2d601dcd8e63::t_ff65d9a8a58075 1-34
+src/styles/tokens.css
+  s_fc2d601dcd8e63::t_d32207e3b46c3f 1-176
+src/utils/locale.ts
+  s_fc2d601dcd8e63::t_f5efbee8bcd612 1-26
+src/utils/reading-time.ts
+  s_fc2d601dcd8e63::t_1997ad2feacd27 1-66
+src/utils/site-identity.ts
+  s_fc2d601dcd8e63::t_c0828bc3d3696f 1-24
+src/worker.ts
+  s_fc2d601dcd8e63::t_d5372efecdb69c 1-8
+tsconfig.json
+  s_fc2d601dcd8e63::t_c8c7687ff2f78b 1-7
+worker-configuration.d.ts
+  s_fc2d601dcd8e63::t_fbe9768ccb093c 1-12043
+wrangler.jsonc
+  s_fc2d601dcd8e63::t_7fd014d74cac70 1-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "2cdf02bbd3cea326fb34daf9a80aaf237fb05f45",
+  "prompts": {},
+  "sessions": {
+    "s_fc2d601dcd8e63": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a18d65-aac4-71af-8773-d3d8d7ae58bc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Harshil Agrawal <harshil@cloudflare.com>"
+    }
+  }
+}

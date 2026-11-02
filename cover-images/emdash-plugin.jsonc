@@ -1,0 +1,44 @@
+{
+	"$schema": "./node_modules/@emdash-cms/plugin-cli/schemas/emdash-plugin.schema.json",
+
+	"slug": "cover-images",
+	"name": "Cover Images",
+	// Step 9: your Atmosphere handle or DID, for example your Bluesky handle.
+	"publisher": "did:plc:cmsconf2026workshop",
+
+	"license": "MIT",
+	"author": { "name": "Harshil Agrawal", "url": "https://github.com/harshil1712" },
+	"security": { "url": "https://github.com/harshil1712/emdash-workshop/security" },
+	"description": "Generates AI cover images for posts with Replicate, and blocks publishing posts without one.",
+	"repo": "https://github.com/harshil1712/emdash-workshop",
+
+	// Trust contract — what runtime APIs the plugin asks for.
+	// Changing these between releases requires a version bump,
+	// because installed users have consented to the old contract.
+	"capabilities": [
+		"network:request", // ctx.http, only to allowedHosts
+		"content:write", // ctx.content (implies read)
+		"media:write", // ctx.media.upload (implies read)
+		"hooks.content-policy:register", // may veto a publish
+	],
+	// Replicate's API, and replicate.delivery (and its subdomains) where it serves generated images.
+	"allowedHosts": ["api.replicate.com", "*.replicate.delivery"],
+	"storage": {},
+
+	"admin": {
+		"pages": [{ "path": "/settings", "label": "Settings" }],
+		"settingsSchema": {
+			// "secret": stored encrypted, never sent back to a browser
+			"replicateToken": { "type": "secret", "label": "Replicate API token" },
+		},
+		"editorActions": [
+			{
+				"id": "generate-cover",
+				"label": "Generate cover", // a button in the post editor
+				"placement": "toolbar", // required: toolbar or overflow
+				"collections": ["posts"], // only on posts
+				"route": "covers/generate", // a private plugin route
+			},
+		],
+	},
+}

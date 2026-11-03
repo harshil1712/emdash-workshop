@@ -1,0 +1,23 @@
+cover-images/README.md
+  s_0ee6afcb06c853::t_a764585dde7e90 37-38
+cover-images/emdash-plugin.jsonc
+  s_0ee6afcb06c853::t_05d21df0b6c1e8 21
+cover-images/src/plugin.ts
+  s_0ee6afcb06c853::t_990818707c6837 48-49,52-57,60-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "d83d1394ae209f94f6fd68c5c7efbf7eeb84512d",
+  "prompts": {},
+  "sessions": {
+    "s_0ee6afcb06c853": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a1a0df-ec76-71af-8773-d3decfc35ba7",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Harshil Agrawal <harshil@cloudflare.com>"
+    }
+  }
+}

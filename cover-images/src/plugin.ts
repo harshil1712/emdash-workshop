@@ -19,6 +19,7 @@ export const TOKEN_KEY = "replicateToken";
 // `CoverResult`, and the editor action, the MCP tool and anything else that
 // makes a cover all call it. The cover is the post's `featured_image` field,
 // under `post.data`. `post.seo.image` is the SEO share image: leave it alone.
+// A saved library image keeps its `id` but not `src`, so check for the `id`.
 
 // ── Settings page (done for you) ─────────────────────────────────────────────
 

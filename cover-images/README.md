@@ -1,6 +1,6 @@
 # Cover Images
 
-A sandboxed [EmDash](https://docs.emdashcms.com/) plugin, built during the EmDash workshop at CMS Conf 2026. It generates a cover image for a post with [FLUX Schnell](https://replicate.com/black-forest-labs/flux-schnell) on Replicate, and blocks publishing a post that has no cover.
+A sandboxed [EmDash](https://docs.emdashcms.com/) plugin, built during the EmDash workshop at CMS Conf 2026. It generates a cover image for a post with [FLUX.2 [klein] 4B](https://replicate.com/black-forest-labs/flux-2-klein-4b) on Replicate, and blocks publishing a post that has no cover.
 
 ## What's in the starter
 

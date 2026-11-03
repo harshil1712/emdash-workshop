@@ -7,7 +7,7 @@ import type {
 import { z } from "zod";
 
 /**
- * Cover Images: generates an AI cover image for a post with FLUX Schnell on
+ * Cover Images: generates an AI cover image for a post with FLUX.2 [klein] 4B on
  * Replicate, and blocks publishing a post without one.
  *
  * This is the workshop's Checkpoint C: the finished plugin.
@@ -22,7 +22,7 @@ export const TOKEN_KEY = "replicateToken";
 // ── generateCover (step 11) ──────────────────────────────────────────────────
 
 const REPLICATE_PREDICTIONS =
-	"https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions";
+	"https://api.replicate.com/v1/models/black-forest-labs/flux-2-klein-4b/predictions";
 
 /** An image field value, as far as this plugin cares. */
 function existingCover(value: unknown): { id: string; src?: string } | null {
@@ -84,7 +84,7 @@ export async function generateCover(ctx: PluginContext, postId: string): Promise
 			"Cancel-After": "25s",
 		},
 		body: JSON.stringify({
-			input: { prompt, aspect_ratio: "16:9", output_format: "webp", num_outputs: 1 },
+			input: { prompt, aspect_ratio: "16:9", output_format: "webp" },
 		}),
 	});
 	const prediction: unknown = await res.json().catch(() => null);
@@ -148,7 +148,7 @@ function settingsPage(hasToken: boolean) {
 			{ type: "header", text: "Cover Images" },
 			{
 				type: "section",
-				text: "Generates a cover image for a post with FLUX Schnell on Replicate, about $0.003 an image. Paste a Replicate API token below. It's stored encrypted, and this page never shows it again.",
+				text: "Generates a cover image for a post with FLUX.2 [klein] 4B on Replicate, about $0.001 an image. Paste a Replicate API token below. It's stored encrypted, and this page never shows it again.",
 			},
 			hasToken
 				? { type: "banner", title: "A Replicate token is saved.", variant: "default" }

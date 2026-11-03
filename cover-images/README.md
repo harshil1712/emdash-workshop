@@ -34,3 +34,5 @@ pnpm run build
 `pnpm run test` builds the plugin and runs the tests in a real sandbox, through EmDash's production wrapper and host bridge.
 
 To use it in your site, run `pnpm add file:../cover-images` in the site, then add it to `plugins: []` (Workers Free) or `sandboxed: []` (Workers Paid) in `astro.config.mjs`. The workshop guide's step 14 walks through it.
+
+After changing the plugin, bump `version` in `package.json`, run `pnpm run build`, and run `pnpm add file:../cover-images` in the site again before you deploy. pnpm copies the package instead of linking it, and EmDash caches a sandboxed plugin by its ID and version, so with the same version the site keeps running the old code.

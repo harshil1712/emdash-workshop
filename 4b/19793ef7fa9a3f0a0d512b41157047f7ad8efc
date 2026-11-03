@@ -1,0 +1,19 @@
+cover-images/README.md
+  s_0ee6afcb06c853::t_45b16644f5df97 37-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "4b19793ef7fa9a3f0a0d512b41157047f7ad8efc",
+  "prompts": {},
+  "sessions": {
+    "s_0ee6afcb06c853": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a1a0df-ec76-71af-8773-d3decfc35ba7",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Harshil Agrawal <harshil@cloudflare.com>"
+    }
+  }
+}

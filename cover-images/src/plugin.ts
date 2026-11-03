@@ -17,7 +17,8 @@ export const TOKEN_KEY = "replicateToken";
 // ── Step 11 ──────────────────────────────────────────────────────────────────
 // TODO(step 11): write `generateCover(ctx, postId)` here. It returns a
 // `CoverResult`, and the editor action, the MCP tool and anything else that
-// makes a cover all call it.
+// makes a cover all call it. The cover is the post's `featured_image` field,
+// under `post.data`. `post.seo.image` is the SEO share image: leave it alone.
 
 // ── Settings page (done for you) ─────────────────────────────────────────────
 
@@ -166,6 +167,8 @@ const plugin: SandboxedPlugin = {
 	// TODO(step 12): expose `generateCover` to agents under `mcp.tools`.
 
 	// TODO(step 13): add the `content:beforePublish` and `content:beforeSchedule` hooks.
+	// `event.content` is the whole content item, so the post's fields are under
+	// `event.content.data` (check `event.content.data.featured_image`).
 };
 
 export default plugin;

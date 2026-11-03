@@ -45,17 +45,20 @@ export async function generateCover(ctx: PluginContext, postId: string): Promise
 	}
 
 	// 1. Read the post. If it already has a cover, return it: calling this twice is safe.
-	// `get` returns the saved post, not a pending draft, so a cover we staged
-	// earlier only shows up in the plugin's KV note until the draft is published.
+	// `get` returns the saved post, not a pending draft. A cover we staged, or an
+	// editor removing one, only exists in the draft, so read that when there is one.
 	const post = await content.get("posts", postId);
 	if (!post) return { ok: false, error: `No post with ID ${postId}.` };
-	const cover = existingCover(post.data.featured_image);
+	let data = post.data;
+	if (post.draftRevisionId && content.getRevision) {
+		const draft = await content.getRevision("posts", postId, post.draftRevisionId);
+		if (draft) data = { ...post.data, ...draft.data };
+	}
+	const cover = existingCover(data.featured_image);
 	if (cover) return { ok: true, mediaId: cover.id, url: cover.src ?? "" };
-	const staged = await ctx.kv.get<{ mediaId: string; url: string }>(`cover:${postId}`);
-	if (staged && post.draftRevisionId) return { ok: true, ...staged };
 
-	const title = text(post.data.title) || "Untitled";
-	const excerpt = text(post.data.excerpt);
+	const title = text(data.title) || "Untitled";
+	const excerpt = text(data.excerpt);
 	const prompt = [
 		`An editorial illustration for a blog post titled "${title}".`,
 		excerpt && `The post is about: ${excerpt}`,
@@ -113,7 +116,6 @@ export async function generateCover(ctx: PluginContext, postId: string): Promise
 	await content.update("posts", postId, {
 		featured_image: { id: mediaId, src: url, alt: `Cover image for "${title}"` },
 	});
-	await ctx.kv.set(`cover:${postId}`, { mediaId, url });
 
 	return { ok: true, mediaId, url };
 }

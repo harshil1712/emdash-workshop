@@ -18,6 +18,7 @@
 	"capabilities": [
 		"network:request", // ctx.http, only to allowedHosts
 		"content:write", // ctx.content (implies read)
+		"content:revisions:read", // ctx.content.getRevision: read a pending draft
 		"media:write", // ctx.media.upload (implies read)
 		"hooks.content-policy:register", // may veto a publish
 	],

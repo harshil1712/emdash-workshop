@@ -22,8 +22,13 @@
 		"media:write", // ctx.media.upload (implies read)
 		"hooks.content-policy:register", // may veto a publish
 	],
-	// Replicate's API, and replicate.delivery (and its subdomains) where it serves generated images.
-	"allowedHosts": ["api.replicate.com", "*.replicate.delivery"],
+	// Replicate's API, plus where it serves generated images: its AI Gateway
+	// outputs bucket on R2 (current outputs) and replicate.delivery (older outputs).
+	"allowedHosts": [
+		"api.replicate.com",
+		"*.replicate.delivery",
+		"ai-gateway-outputs.0d37909e38d3e99c29fa2cd343ac421a.r2.cloudflarestorage.com",
+	],
 	"storage": {},
 
 	"admin": {
